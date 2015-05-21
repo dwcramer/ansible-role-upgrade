@@ -1,0 +1,17 @@
+---
+- name: "autoremove"
+  sudo: yes
+  command: "apt-get -y autoremove"
+
+- name: "autoclean"
+  sudo: yes
+  command: "apt-get -y autoclean"
+
+- name: "clean packages"
+  sudo: yes
+  command: "apt-get -y clean"
+
+- name: "update grub"
+  sudo: yes
+  command: "update-grub"
+  when: upgrade_update_grub
